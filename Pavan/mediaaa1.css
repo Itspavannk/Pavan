@@ -1,0 +1,51 @@
+@media screen and (max-width:426px) and (min-width:375px)
+{
+    #main{
+        overflow: hidden;
+        }
+    
+        #background{
+    
+          background-position: center; 
+            
+        }
+        
+    i{
+    opacity: 0;
+    }
+    
+    .wish h1{
+        width: 100%;
+        translate: 10px 25px;
+        font-size: 30px;
+        margin-left:0px ;
+        text-align: center;
+    }
+    #ghost{
+        height: 250px;
+        width: 250px;
+        translate: 85px 50px;
+        object-fit: fill;
+        border-radius: 3%;
+
+
+        }
+        .btn{
+        translate: 0px -250px;
+        
+        }
+        .balloon
+        {
+            margin:5px 10px;
+    
+            translate: 10px;
+        }
+    
+
+
+
+
+
+
+    
+}

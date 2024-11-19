@@ -1,0 +1,288 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body,html{
+
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    background-image: url("birthday-cake-is-table-with-balloons-balloons_853677-37592-transformed.jpg");
+    background-size: cover;
+    overflow: hidden;
+}
+#light img{
+width: 22px;
+height: 28px;
+position: absolute;
+top: 29%;
+left: 51.4%;
+z-index: 1001;
+}
+#light h1{
+    translate: 20px 100px;
+    text-align: center;
+    visibility: hidden;
+}
+#light img:hover{
+    animation: light 3s linear infinite ;
+}
+
+#light img:hover +  h1{
+    animation: wishes 3s ease-in-out infinite;
+}
+
+
+@keyframes light {
+    0%{transform:rotate(-5deg) scale(1);}
+    10%{transform:rotate(5deg) scale(1.2);}
+    20%{transform:rotate(-5deg) scale(1.4);}
+    30%{transform:rotate(5deg) scale(1.6);}
+    40%{transform:rotate(-5deg) scale(1.8);}
+    50%{transform: rotate(5deg) scale(2);}
+    60%{transform:rotate(-5deg) scale(2.2);}
+    70%{transform:rotate(5deg) scale(2.4);}
+    80%{transform:rotate(-5deg) scale(2.5);}
+    90%{transform:rotate(5deg) scale(2.6);}
+    100%{transform: rotate(-5deg) scale(2.7);}
+}
+
+
+@keyframes wishes{
+    0%{color: aqua;}
+    25%{color: rgb(252, 0, 0);scale: 1.5;transform: rotate(-3deg);}
+    50%{color: rgb(0, 17, 255);scale: 1.9;transform: rotate(3deg);}
+    75%{color: rgb(238, 0, 255);transform: rotate(-3deg);}
+    100%{color: rgb(255, 217, 0);scale: 2.5;transform: rotate(3deg);visibility: visible;}
+    
+    }
+.images
+{
+        height: 400px;
+        width: 400px;
+}
+#a1
+{
+    translate:-40px 820px;
+}
+#a2
+{
+    translate: 1150px 400px;
+}
+
+#light:hover + .images{
+animation: popper 2s linear infinite ;
+}
+@keyframes popper{
+    0%{translate: 0px;}
+    100%{translate: 0px -1200px;}
+}
+
+
+.balloon {
+    translate: 400px;
+    display:inline-block;
+     width:120px;
+    height:145px;
+    background:hsl(215,50%,65%);
+    border-radius:80%;
+    position:relative;
+    box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+    margin:50px 30px;
+    transition:transform 0.7s ease;
+    z-index:10;
+    animation:balloons 4s ease-in-out infinite;
+    transform-origin: top bottom;
+  }
+  
+  @keyframes balloons {
+    0%,100%{ transform:translateY(600px) rotate(-8deg); }
+    50%{ transform:translateY(-850px) rotate(8deg); }
+  }
+  
+  
+  .balloon:before {
+    content:"▲";
+    font-size:20px;
+    color:hsl(215,30%,50%);
+    display:block;
+    text-align:center;
+    width:100%;
+    position:absolute;
+    bottom:-12px;
+    z-index:-100;
+  }
+  #bln{
+   translate: -470px;
+  }
+  
+  .balloon:after {
+   display:inline-block; top:140px;
+    position:absolute;
+    height:250px;
+    translate: 160px;
+    width:1px;
+    margin:0 auto;
+    content:"";
+    background:rgba(0,0,0,0.2); 
+  }
+  
+  .balloon:nth-child(2){ background:hsl(245,40%,65%); animation-duration:3.5s; }
+  .balloon:nth-child(2):before { color:hsl(245,40%,65%);  }
+  
+  .balloon:nth-child(3){ background:hsl(139,50%,60%); animation-duration:3s; }
+  .balloon:nth-child(3):before { color:hsl(139,30%,50%);  }
+  
+  .balloon:nth-child(4){ background:hsl(59,50%,58%); animation-duration:4.5s; }
+  .balloon:nth-child(4):before { color:hsl(59,30%,52%);  }
+  
+  .balloon:nth-child(5){ background:hsl(23,55%,57%); animation-duration:5s; }
+  .balloon:nth-child(5):before { color:hsl(23,44%,46%);  }
+
+  .balloon:nth-child(6){ background:hsl(120, 100%, 50%); animation-duration:4.5s; }
+  .balloon:nth-child(6):before { color:hsl(116, 100%, 50%);  }
+
+  .balloon:nth-child(7){ background:hsl(0, 100%, 66%); animation-duration:5s; }
+  .balloon:nth-child(7):before { color:hsl(245, 73%, 54%);  }
+
+
+
+  .confetti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1000;
+}
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background: #ffd300;
+    top: 0;
+    opacity: 0;
+}
+.confetti-piece:nth-child(1) {
+    left: 7%;
+    transform: rotate(-40deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 182ms;
+    animation-duration: 1116ms;
+}
+.confetti-piece:nth-child(2) {
+    left: 14%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 161ms;
+    animation-duration: 1076ms;
+}
+.confetti-piece:nth-child(3) {
+    left: 21%;
+    transform: rotate(-51deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 481ms;
+    animation-duration: 1103ms;
+}
+.confetti-piece:nth-child(4) {
+    left: 28%;
+    transform: rotate(61deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 334ms;
+    animation-duration: 708ms;
+}
+.confetti-piece:nth-child(5) {
+    left: 35%;
+    transform: rotate(-52deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 302ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(6) {
+    left: 42%;
+    transform: rotate(38deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 180ms;
+    animation-duration: 1168ms;
+}
+.confetti-piece:nth-child(7) {
+    left: 49%;
+    transform: rotate(11deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 395ms;
+    animation-duration: 1200ms;
+}
+.confetti-piece:nth-child(8) {
+    left: 56%;
+    transform: rotate(49deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 14ms;
+    animation-duration: 887ms;
+}
+.confetti-piece:nth-child(9) {
+    left: 63%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 149ms;
+    animation-duration: 805ms;
+}
+.confetti-piece:nth-child(10) {
+    left: 70%;
+    transform: rotate(10deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 351ms;
+    animation-duration: 1059ms;
+}
+.confetti-piece:nth-child(11) {
+    left: 77%;
+    transform: rotate(4deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 307ms;
+    animation-duration: 1132ms;
+}
+.confetti-piece:nth-child(12) {
+    left: 84%;
+    transform: rotate(42deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 464ms;
+    animation-duration: 776ms;
+}
+.confetti-piece:nth-child(13) {
+    left: 91%;
+    transform: rotate(-72deg);
+    animation: makeItRain 1000ms infinite ease-out;
+    animation-delay: 429ms;
+    animation-duration: 818ms;
+}
+.confetti-piece:nth-child(odd) {
+    background: #7431e8;
+}
+.confetti-piece:nth-child(even) {
+    z-index: 1;
+}
+.confetti-piece:nth-child(4n) {
+    width: 5px;
+    height: 12px;
+    animation-duration: 2000ms;
+}
+.confetti-piece:nth-child(3n) {
+    width: 3px;
+    height: 10px;
+    animation-duration: 2500ms;
+    animation-delay: 1000ms;
+}
+.confetti-piece:nth-child(4n-7) {
+  background: red;
+}
+@keyframes makeItRain {
+    from {opacity: 0;}
+    50% {opacity: 1;}
+    to {transform: translateY(350px);}
+}
